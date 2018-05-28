@@ -13,7 +13,18 @@ npm install
 node generate.js
 ```
 
-3. Import the resulting CSV(s) into your MongoDB
+3. *(optional)* Open the resulting "csv" folder and copy out the list of file paths into Excel.
+```
+Ctrl+A within the "csv" folder
+Shift+Right Click > "Copy as Path"
+Ctrl+V into Excel
+```
+
+4. Import the resulting CSV(s) into your MongoDB
 ```
 mongoimport -h <HOSTNAME>:<PORT> -d <DATABASE> -c <COLLECTION> -u <USERNAME> -p <PASSWORD> --type csv --headerline --file <FILENAME>
+```
+or, for bulk import using Excel in step #3 above
+```
+="mongoimport -h <HOSTNAME>:<PORT> -d <DATABASE> -c <COLLECTION> -u <USERNAME> -p <PASSWORD> --type csv --headerline --file "&""""&B2&""""
 ```
