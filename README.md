@@ -20,7 +20,7 @@ Shift+Right Click > "Copy as Path"
 Ctrl+V into Excel
 ```
 
-4. Import the resulting CSV(s) into your MongoDB
+4. Build the mongoimport command
 ```
 mongoimport -h <HOSTNAME>:<PORT> -d <DATABASE> -c <COLLECTION> -u <USERNAME> -p <PASSWORD> --type csv --headerline --file <FILENAME>
 ```
@@ -28,3 +28,10 @@ or, for bulk import using Excel in step #3 above
 ```
 ="mongoimport -h <HOSTNAME>:<PORT> -d <DATABASE> -c <COLLECTION> -u <USERNAME> -p <PASSWORD> --type csv --headerline --file "&""""&B2&""""
 ```
+
+5. Open a Console and navigate to your MongoDB bin
+```
+cd "C:\Program Files\MongoDB\Server\3.6\bin"
+```
+
+6. Run the MongoImport command from step #4.
